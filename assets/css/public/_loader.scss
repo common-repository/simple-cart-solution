@@ -1,0 +1,41 @@
+.simple-cart-loading {
+  position: relative;
+
+  &:before {
+    content: '';
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 0, 0, 0, 0.05 );
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 90;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 5px solid $purple;
+    border-color: $purple $white $purple $white;
+    animation: simple-cart-dual-ring 1.2s linear infinite;
+  }
+}
+
+@keyframes simple-cart-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

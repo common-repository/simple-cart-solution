@@ -1,0 +1,121 @@
+@keyframes simpleCartPopupShow {
+  0% {
+    opacity: 0;
+    width: 90%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 90%;
+
+    transform: translate3d( 0px, 0px, 0px );
+  }
+}
+
+@keyframes simpleCartPopupHide {
+  0% {
+    opacity: 1;
+    width: 90%;
+
+    transform: translate3d( 0px, 0px, 0px );
+  }
+
+  100% {
+    opacity: 0;
+    width: 90%;
+  }
+}
+
+.simple-cart-popup {
+  box-sizing: border-box;
+  width: 0;
+  max-width: 360px;
+  min-height: 200px;
+  height: 100%;
+  max-height: calc( 90% - 100px );
+  bottom: 100px;
+  position: fixed;
+  right: 20px;
+  z-index: 9999;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.15 );
+  overflow: hidden;
+  opacity: 0;
+  transform: translate3d( 10px, 10px, 0px );
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+
+  &.opening {
+    -webkit-animation-name: simpleCartPopupShow; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: simpleCartPopupShow;
+    animation-duration: 1s;
+  }
+
+  &.closing {
+    -webkit-animation-name: simpleCartPopupHide; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: simpleCartPopupHide;
+    animation-duration: 1s;
+  }
+
+  &.open {
+    opacity: 1;
+    width: 90%;
+    transform: translate3d( 0px, 0px, 0px );
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: $purple;
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $purple;
+      text-decoration: underline;
+    }
+  }
+
+  .simple-cart-popup-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .simple-cart-popup-body {
+    height: calc( 100% - 40px );
+    padding-bottom: 40px;
+    overflow: auto;
+    padding: 15px;
+  }
+}
+
+.simple-cart-powered-by {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  color: $purple;
+  background: $grey_light;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  line-height:40px;
+  font-size: 14px;
+}
+
+.simple-cart-popup-empty {
+  text-align: center;
+  margin: 40px 0;
+
+  svg {
+    height: 60px;
+    opacity: 0.5;
+  }
+}

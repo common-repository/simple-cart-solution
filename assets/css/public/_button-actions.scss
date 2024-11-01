@@ -1,0 +1,19 @@
+.simple-cart-popup-button {
+  .simple-cart-popup-button-actions {
+
+    span {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      color: $purple;
+      background: #fff;
+      border: 1px solid $purple;
+      line-height: 18px;
+    }
+
+  }
+}

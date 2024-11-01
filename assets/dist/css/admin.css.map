@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./assets/css/admin.scss"],"names":[],"mappings":"AAAA;EACE,YAAW;EACX,aAAY;EACZ,sBAAqB,EACtB","file":"css/admin.css","sourcesContent":[".sc-colorpickpreview {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n}"],"sourceRoot":""}
